@@ -29,26 +29,27 @@ logMessage('message');
 
 // 5. indent ルール
 function greet(name) {
-    return 'Hello, ' + name; // indent: インデントが不正
+return 'Hello, ' + name; // indent: インデントが不正
 }
-greet('Hello World');
+greet('Hello World')
 
 // 6. quotes ルール
 function sayHello() {
     const greeting = "Hello, World!";  // quotes: ダブルクォート使用
     return greeting;
 }
-sayHello()
+sayHello();
 
 // 7. semi ルール
 function getGreeting(name) {
-    return 'Hello, ' + name; // semi: セミコロンがない
+    return 'Hello, ' + name // semi: セミコロンがない
 }
 getGreeting('World');
 
 // 8. brace-style ルール
 function showMessage(condition) {
-    if (condition) { // brace-style: ブレースのスタイルが不正
+    if (condition) 
+    { // brace-style: ブレースのスタイルが不正
         console.log('Condition is true');
     }
 }
@@ -74,7 +75,7 @@ function checkStatus(status) {
     } else if (status === 'failure') {
         return false;
     } // consistent-return: 一貫性のない return
-    // else {    'success' or 'failure' に該当しない場合にundefinedが返されてしまう
+        // else {    'success' or 'failure' に該当しない場合にundefinedが返されてしまう
     // return null 
     // }
 }
@@ -82,7 +83,7 @@ checkStatus('success');
 
 // 12. no-var ルール
 function displayMessage() {
-    const message = 'Hello!';  // `var` が使用されている
+    var message = 'Hello!';  // `var` が使用されている
     console.log(message);
 }
 displayMessage();
