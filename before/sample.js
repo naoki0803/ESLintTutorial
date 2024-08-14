@@ -87,3 +87,41 @@ function displayMessage() {
     console.log(message);
 }
 displayMessage();
+
+// 13. complexity ルール
+// この関数は複雑すぎるため、complexityルールに引っかかる
+function calculate(value) {
+    if (value > 10) {
+        if (value < 20) {
+            if (value % 2 === 0) {
+                if (value > 15) {
+                    return 'Value is between 16 and 20 and even';
+                } else {
+                    return 'Value is between 11 and 15 and even';
+                }
+            } else {
+                return 'Value is between 11 and 20 and odd';
+            }
+        } else {
+            if (value < 30) {
+                if (value % 2 === 0) {
+                    return 'Value is between 21 and 30 and even';
+                } else {
+                    return 'Value is between 21 and 30 and odd';
+                }
+            } else {
+                return 'Value is greater than 30';
+            }
+        }
+    } else {
+        return 'Value is 10 or less';
+    }
+}
+calculate(10);
+
+// 14. prefer-const ルール
+function getMessage(name) {
+    const message = 'Hello, ' + name; // prefer-const: この変数は再代入されないため、constを使用すべき
+    return message;
+}
+getMessage('hoge');
